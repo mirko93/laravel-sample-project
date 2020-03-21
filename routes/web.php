@@ -29,3 +29,7 @@ Route::get('/questionnaires/{questionnaire}', 'QuestionnaireController@show');
 // question route
 Route::get('/questionnaires/{questionnaire}/questions/create', 'QuestionController@create');
 Route::post('/questionnaires/{questionnaire}/questions', 'QuestionController@store');
+
+// survey route
+Route::get('/surveys/{questionnaire}-{slug}', 'SurveyController@show');
+Route::post('/surveys/{questionnaire}-{slug}', 'SurveyController@store');
